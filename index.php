@@ -126,6 +126,25 @@
             </div>
         </div>
     </section>
+    <!-- Call to action section -->
+    <section class="relative bg-cover bg-center" style="background-image: url('images/HIV-1.jpeg');">
+        <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+        <div class="relative container mx-auto px-4 py-32">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-white">Need More Tips?</h2>
+                <p class="mt-4 text-lg text-gray-300">Sign up to receive more tips and updates about HIV/AIDS awareness.
+                </p>
+                <form action="#" method="post" class="mt-8">
+                    <div class="flex items-center justify-center">
+                        <input type="email" name="email" placeholder="Your Email Address"
+                            class="w-64 px-4 py-3 mr-2 text-gray-800 bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit"
+                            class="px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- Slider End -->
     <!-- Link Swiper JS -->
