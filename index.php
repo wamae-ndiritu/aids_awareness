@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font awesome icons -->
+    <script src="https://kit.fontawesome.com/7668282ff5.js" crossorigin="anonymous"></script>
     <title>knowHIV - HIV/AIDS Awareness</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <!-- Link Swiper CSS -->
@@ -76,19 +78,15 @@
     <section class="my-5 px-4 md:px-16" id="join-our-community">
         <h2 class="text-3xl font-semibold text-center text-red-600 my-3">Joining Our Community</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <div class="col-span-1 p-4 md:py-16">
+            <div class="col-span-1 p-4">
                 <img src="images/community.jpeg" alt="Our Community" class="flex-grow-1 h-96">
             </div>
             <div class="col-span-1 p-4 text-gray-600 font-sans">
                 <p>Our community platform provides a safe and inclusive space where you can:</p>
                 <ul class="pl-10 m-0 my-2 list-disc">
-                    <li>View Posts: Explore a wealth of informative and inspiring posts about HIV/AIDS awareness,
-                        prevention, treatment, and support.</li>
-                    <li>Share Posts: Contribute to the conversation by sharing your own experiences, insights, and
-                        resources
-                        related to HIV/AIDS.</li>
-                    <li>Engage with Others: Connect with like-minded individuals, share knowledge, and offer support to
-                        those in need through comments and discussions.</li>
+                    <li>View Posts and tips</li>
+                    <li>Share Posts</li>
+                    <li>Engage with Others</li>
                 </ul>
                 <p class="py-3">Whether you're seeking information, looking to share your story, or simply want to
                     connect with
@@ -104,6 +102,31 @@
             </div>
         </div>
     </section>
+    <!-- Benefits of Our Community -->
+    <section class="my-5 px-4 md:px-16" id="community-benefits">
+        <h2 class="text-3xl font-semibold text-center text-red-600 my-3">Discover the Benefits of Our Community</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-gray-600 font-sans">
+            <div class="col-span-1 flex flex-col items-center">
+                <i class="fa fa-search text-2xl"></i>
+                <h3 class="text-red-600 my-1 text-xl">Explore Posts</h3>
+                <p>Explore a wealth of informative and inspiring posts about HIV/AIDS awareness, prevention,
+                    treatment, and support.</p>
+            </div>
+            <div class="col-span-1 flex flex-col items-center">
+                <i class="fa fa-share text-2xl"></i>
+                <h3 class="text-red-600 my-1 text-xl">Share Posts</h3>
+                <p>Contribute to the conversation by sharing your own experiences, insights, and resources related
+                    to HIV/AIDS.</p>
+            </div>
+            <div class="col-span-1 flex flex-col items-center">
+                <i class="fa fa-comments text-2xl"></i>
+                <h3 class="text-red-600 my-1 text-xl">Engage with Others</h3>
+                <p>Connect with like-minded individuals, share knowledge, and offer support to those in need through
+                    comments and discussions.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Slider End -->
     <!-- Link Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
