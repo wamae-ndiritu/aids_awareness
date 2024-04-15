@@ -103,7 +103,7 @@
         </div>
     </section>
     <!-- Benefits of Our Community -->
-    <section class="my-5 px-4 md:px-16" id="community-benefits">
+    <section class="my-10 px-4 md:px-16" id="community-benefits">
         <h2 class="text-3xl font-semibold text-center text-red-600 my-3">Discover the Benefits of Our Community</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-gray-600 font-sans">
             <div class="col-span-1 flex flex-col items-center">
@@ -127,7 +127,7 @@
         </div>
     </section>
     <!-- Call to action section -->
-    <section class="relative bg-cover bg-center" style="background-image: url('images/HIV-1.jpeg');">
+    <section class="relative bg-cover bg-center" style="background-image: url('images/HIV-1.jpeg');" id='call-to-action'>
         <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
         <div class="relative container mx-auto px-4 py-32">
             <div class="max-w-3xl mx-auto text-center">
@@ -145,8 +145,8 @@
             </div>
         </div>
     </section>
-
-    <!-- Slider End -->
+    <!-- Footer -->
+    <?php include 'includes/footer.php' ?>
     <!-- Link Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Custom JavaScript -->

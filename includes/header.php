@@ -13,7 +13,7 @@
         <li>
             <a href="index.php#join-our-community">Joining Our Community</a>
         </li>
-        <li><a href="index.php#help">Help</a></li>
+        <li><a href="index.php#call-to-action">Tips</a></li>
         <li></li>
     </ul>
 </nav>
