@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 30%;
+    height: 100vh;
+    /* Set the height to full viewport height */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    border-right: 2px solid gray;
+}
+
+.main-content {
+    flex-grow: 1;
+    /* Allow main content to grow and fill remaining space */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    padding: 0 20px;
+}
