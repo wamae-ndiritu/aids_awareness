@@ -1,21 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIV/AIDS Information</title>
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>knowHIV - HIV/AIDS Awareness</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Link Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Custom CSS -->
 </head>
+
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <div>
-                <?php include 'sidebar.php'; ?>
+    <?php include 'includes/header.php' ?>
+    <!-- Slider Start -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <img src="images/HIV-1.jpeg" class="slide-image" alt="Slide 1 Image">
+                <div class="text-overlay">
+                    <h2 class="text-4xl font-semibold">Empowering Youth Against HIV/AIDS</h2>
+                    <p class="text-xl md:max-w-3xl">Join us in empowering the youth with knowledge and resources to
+                        prevent HIV/AIDS. Together, we can build a future free from the threat of this epidemic.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <img src="images/awareness-1.jpeg" class="slide-image" alt="Slide 2 Image">
+                <div class="text-overlay">
+                    <h2 class="text-4xl font-semibold">Breaking the Silence: Talking About HIV/AIDS</h2>
+                    <p class="text-xl md:max-w-3xl">Break the silence and start a conversation about HIV/AIDS. By openly discussing prevention
+                        strategies and promoting safe behaviors, we can overcome stigma and create a supportive
+                        community.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <img src="images/healthy-relationships.png" class="slide-image" alt="Slide 3 Image">
+                <div class="text-overlay">
+                    <h2 class="text-4xl font-semibold">Building Healthy Relationships</h2>
+                    <p class="text-xl md:max-w-3xl">Healthy relationships are the foundation of a thriving community. Learn how to cultivate respectful, supportive relationships and make informed decisions to protect yourself and your partners from HIV/AIDS.</p>
+                </div>
             </div>
         </div>
-        <div class="main-content">
-            <?php include 'main_content.php'; ?>
-        </div>
     </div>
+    <!-- Join our community section -->
+    <section class="my-5 px-4 md:px-16" id="join-our-community">
+        <h2 class="text-3xl font-semibold text-center text-red-600 my-3">Joining Our Community</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="col-span-1 p-4 md:py-16">
+                <img src="images/community.jpeg" alt="Our Community" class="flex-grow-1 h-96">
+            </div>
+            <div class="col-span-1 p-4 text-gray-600 font-sans">
+                <p>Our community platform provides a safe and inclusive space where you can:</p>
+                <ul class="pl-10 m-0 my-2 list-disc">
+                    <li>View Posts: Explore a wealth of informative and inspiring posts about HIV/AIDS awareness,
+                        prevention, treatment, and support.</li>
+                    <li>Share Posts: Contribute to the conversation by sharing your own experiences, insights, and
+                        resources
+                        related to HIV/AIDS.</li>
+                    <li>Engage with Others: Connect with like-minded individuals, share knowledge, and offer support to
+                        those in need through comments and discussions.</li>
+                </ul>
+                <p class="py-3">Whether you're seeking information, looking to share your story, or simply want to connect with
+                    others
+                    who are passionate about HIV/AIDS awareness, our community is here for you.</p>
+                <p class="py-3">Join us today and be a part of the movement to create a world where HIV/AIDS is understood, accepted,
+                    and
+                    ultimately eradicated.</p>
+                <div class="flex justify-center my-3">
+                    <a href="register.php" class="bg-red-500 text-white rounded-full px-4 py-2">Sign Up Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Slider End -->
+    <!-- Link Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="JS/index.js"></script>
 </body>
+
 </html>
