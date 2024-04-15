@@ -5,7 +5,7 @@
     </a>
     <ul class="flex gap-3 list-none text-white">
         <li>
-            <a href="about.php">About</a>
+            <a href="index.php#about">About</a>
         </li>
         <li>
             <a href="community.php">Community</a>

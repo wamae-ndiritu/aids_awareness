@@ -31,7 +31,8 @@
                 <img src="images/awareness-1.jpeg" class="slide-image" alt="Slide 2 Image">
                 <div class="text-overlay">
                     <h2 class="text-4xl font-semibold">Breaking the Silence: Talking About HIV/AIDS</h2>
-                    <p class="text-xl md:max-w-3xl">Break the silence and start a conversation about HIV/AIDS. By openly discussing prevention
+                    <p class="text-xl md:max-w-3xl">Break the silence and start a conversation about HIV/AIDS. By openly
+                        discussing prevention
                         strategies and promoting safe behaviors, we can overcome stigma and create a supportive
                         community.</p>
                 </div>
@@ -41,11 +42,36 @@
                 <img src="images/healthy-relationships.png" class="slide-image" alt="Slide 3 Image">
                 <div class="text-overlay">
                     <h2 class="text-4xl font-semibold">Building Healthy Relationships</h2>
-                    <p class="text-xl md:max-w-3xl">Healthy relationships are the foundation of a thriving community. Learn how to cultivate respectful, supportive relationships and make informed decisions to protect yourself and your partners from HIV/AIDS.</p>
+                    <p class="text-xl md:max-w-3xl">Healthy relationships are the foundation of a thriving community.
+                        Learn how to cultivate respectful, supportive relationships and make informed decisions to
+                        protect yourself and your partners from HIV/AIDS.</p>
                 </div>
             </div>
         </div>
     </div>
+    <!-- About Section -->
+    <section class="my-5 px-4 md:px-16" id="about">
+        <h2 class="text-3xl font-semibold text-center text-red-600 my-3">About knowHIV</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="col-span-1 p-4 md:py-8 text-gray-600 font-sans">
+                <p>Our platform serves as a beacon of hope and information, offering a wealth of resources, support, and
+                    community connections for those affected by HIV/AIDS. From comprehensive educational materials and
+                    prevention strategies to uplifting stories of resilience and solidarity, [Platform Name] is your
+                    trusted ally in navigating the complexities of HIV/AIDS. </p>
+                <p class="py-3">Join us as we work tirelessly to raise awareness, challenge stigma, and build a brighter
+                    future for individuals affected by HIV/AIDS. Together, we can create a world where HIV/AIDS is
+                    understood, accepted, and ultimately eradicated.</p>
+                <p class="py-3">Driven by a commitment to inclusivity and compassion, we strive to create a welcoming
+                    space where everyone feels valued, respected, and supported. Whether you're seeking knowledge,
+                    seeking support, or seeking to make a difference, [Platform Name] is here to guide you every step of
+                    the way.</p>
+            </div>
+            <div class="col-span-1 p-4">
+                <img src="images/together-we-can.jpeg" alt="About knowHIV" class="flex-grow-1 h-96">
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
     <!-- Join our community section -->
     <section class="my-5 px-4 md:px-16" id="join-our-community">
         <h2 class="text-3xl font-semibold text-center text-red-600 my-3">Joining Our Community</h2>
@@ -64,10 +90,12 @@
                     <li>Engage with Others: Connect with like-minded individuals, share knowledge, and offer support to
                         those in need through comments and discussions.</li>
                 </ul>
-                <p class="py-3">Whether you're seeking information, looking to share your story, or simply want to connect with
+                <p class="py-3">Whether you're seeking information, looking to share your story, or simply want to
+                    connect with
                     others
                     who are passionate about HIV/AIDS awareness, our community is here for you.</p>
-                <p class="py-3">Join us today and be a part of the movement to create a world where HIV/AIDS is understood, accepted,
+                <p class="py-3">Join us today and be a part of the movement to create a world where HIV/AIDS is
+                    understood, accepted,
                     and
                     ultimately eradicated.</p>
                 <div class="flex justify-center my-3">
