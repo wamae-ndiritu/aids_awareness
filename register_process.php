@@ -20,10 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: login.php");
         exit();
     } else {
+        echo "Error executing";
         echo "Error: " . $stmt->error;
     }
 
     // Close statement
     $stmt->close();
 }
-?>

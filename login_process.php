@@ -28,14 +28,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: homepage.php");
             exit();
         } else {
-            echo "Invalid username or password.";
+            // Invalid username or password
+            $_SESSION["error"] = "Invalid username or password.";
+            header("Location: login.php");
+            exit();
         }
     } else {
-        echo "Invalid username or password.";
+        // User not found
+        $_SESSION["error"] = "Invalid username or password.";
+        header("Location: login.php");
+        exit();
     }
-
-    // Close database connection
-    $stmt->close();
-    $conn->close();
 }
-?>
+
