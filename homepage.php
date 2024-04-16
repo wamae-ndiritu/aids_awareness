@@ -9,8 +9,6 @@ if (!isset($_SESSION["user_id"]) || empty($_SESSION["user_id"])) {
     exit();
 }
 
-// Include database connection
-include 'config.php';
 
 // Get user information from session
 $user_id = $_SESSION["user_id"];

@@ -11,7 +11,7 @@
 <body>
     <section class="h-screen grid grid-cols-1 md:grid-cols-2 font-sans">
         <div class="col-span-1 p-4 flex flex-col justify-center items-center bg-red-600">
-            <img src="./images/hiv-awareness-ribbon.jpeg" alt="HIV/AIDS Awareness" class="w-48 h-52 object-cover">
+            <img src="images/hiv-awareness-ribbon.jpeg" alt="HIV/AIDS Awareness" class="w-48 h-52 object-cover">
             <h1 class="text-3xl font-normal my-3 text-white">Creating HIV & AIDS Awareness</h1>
             <h6 class="text-white my-1 px-1 md:px-16 text-md">
                 Welcome to our HIV/AIDS awareness platform. Your presence here signifies a commitment to learning,

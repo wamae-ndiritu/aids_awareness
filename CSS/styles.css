@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.text-red-300{
+    color: rgb(154, 4, 4);
+}
+
 .sidebar {
     width: 30%;
     height: 100vh;
