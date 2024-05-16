@@ -6,7 +6,7 @@ $user_id = $_SESSION["user_id"];
 ?>
 
 <nav class="w-full flex items-center justify-between bg-red-500 px-4 py-2 md:px-16">
-    <a href="index.php" class="flex gap-3 items-center">
+    <a href="homepage.php" class="flex gap-3 items-center">
         <img src="images/hiv-awareness-ribbon.jpeg" alt="logo" class="h-16 object-cover">
         <h2 class="text-3xl text-white font-semibold my-auto">knowHIV</h2>
     </a>
@@ -15,7 +15,7 @@ $user_id = $_SESSION["user_id"];
             <a href="index.php#about">About</a>
         </li>
         <li>
-            <a href="community.php">Community</a>
+            <a href="homepage.php">Community</a>
         </li>
         <li>
             <a href="index.php#join-our-community">Joining Our Community</a>
