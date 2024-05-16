@@ -8,6 +8,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $user_id = $_SESSION['user_id'];
+$username = $_SESSION['username'];
 
 $stmt = $conn->prepare("SELECT id, title, content, image_url, created_at FROM posts WHERE user_id = ? ORDER BY created_at DESC");
 $stmt->bind_param("i", $user_id);
@@ -27,14 +28,14 @@ $stmt->bind_result($post_id, $title, $content, $image_url, $created_at);
 <body>
     <?php include 'includes/header.php'; ?>
     <div class="max-w-2xl mx-auto mt-10">
-        <div class="flex justify-between border rounded p-2 my-2">
-            <div class="flex items-center">
+        <div class="flex justify-between items-center border rounded p-2 my-2">
+            <a href="my-account.php" class="flex items-center">
                 <!-- User profile image -->
                 <img src="profile_image.jpg" alt="Profile Image" class="w-16 h-16 rounded-full mr-2">
 
                 <!-- User name -->
-                <span class="text-gray-800 font-semibold">John Doe</span>
-            </div>
+                <span class="text-gray-800 font-semibold"><?php echo $username; ?></span>
+            </a>
 
             <!-- Add new post button -->
             <a href="create_post.php" class="bg-blue-500 text-white p-2 rounded">
