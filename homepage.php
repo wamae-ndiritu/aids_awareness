@@ -10,8 +10,8 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 $username = $_SESSION['username'];
 
-$stmt = $conn->prepare("SELECT id, title, content, image_url, created_at FROM posts WHERE user_id = ? ORDER BY created_at DESC");
-$stmt->bind_param("i", $user_id);
+$stmt = $conn->prepare("SELECT id, title, content, image_url, created_at FROM posts ORDER BY created_at DESC");
+// $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $stmt->store_result();
 $stmt->bind_result($post_id, $title, $content, $image_url, $created_at);
@@ -31,15 +31,15 @@ $stmt->bind_result($post_id, $title, $content, $image_url, $created_at);
         <div class="flex justify-between items-center border rounded p-2 my-2">
             <a href="my-account.php" class="flex items-center">
                 <!-- User profile image -->
-                <img src="profile_image.jpg" alt="Profile Image" class="w-16 h-16 rounded-full mr-2">
+                 <img src="<?php echo $profile_pic ? htmlspecialchars($profile_pic) : 'images/default_profile.jpeg'; ?>" alt="Profile Picture" class="mt-2 w-16 h-16 object-cover rounded-full">
 
                 <!-- User name -->
-                <span class="text-gray-800 font-semibold"><?php echo $username; ?></span>
+                <span class="text-gray-800 font-semibold ml-4"><?php echo $username; ?></span>
             </a>
 
             <!-- Add new post button -->
-            <a href="create_post.php" class="bg-blue-500 text-white p-2 rounded">
-                <i class="fas fa-plus"></i>
+            <a href="create_post.php" class="bg-red-500 text-white p-2 rounded">
+                New Post
             </a>
         </div>
 
@@ -48,7 +48,7 @@ $stmt->bind_result($post_id, $title, $content, $image_url, $created_at);
                 <h2 class="text-2xl font-bold mb-2"><?php echo htmlspecialchars($title); ?></h2>
                 <?php if ($image_url): ?>
                     <img src="<?php echo htmlspecialchars($image_url); ?>" alt="Post Image"
-                        class="mb-4 h-96 w-full object-cover">
+                        class="mb-4 h-96 object-contain">
                 <?php endif; ?>
                 <p><?php echo nl2br(htmlspecialchars($content)); ?></p>
                 <small class="text-gray-600"><?php echo $created_at; ?></small>
