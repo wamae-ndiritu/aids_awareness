@@ -46,7 +46,7 @@ $result = $conn->query($query);
         <nav class="flex flex-col p-4 space-y-2">
             <a href="dashboard.php" class="py-2 px-4 bg-gray-900 rounded mb-1">Posts</a>
             <a href="users.php" class="py-2 px-4 bg-gray-900 rounded mb-1">Users</a>
-            <!-- Add more links as needed -->
+            <a href="logout.php" class="py-2 px-4 bg-gray-900 rounded mb-1">Logout</a>
         </nav>
     </aside>
 
