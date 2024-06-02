@@ -64,8 +64,8 @@ if (!$post) {
             <h1 class="text-2xl font-semibold">Admin Dashboard</h1>
         </div>
         <nav class="flex flex-col p-4 space-y-2">
-            <a href="dashboard.php" class="py-2 px-4 bg-gray-900 rounded">Posts</a>
-            <!-- Add more links as needed -->
+            <a href="dashboard.php" class="py-2 px-4 bg-gray-900 rounded mb-1">Posts</a>
+            <a href="users.php" class="py-2 px-4 bg-gray-900 rounded mb-1">Users</a>
         </nav>
     </aside>
 
