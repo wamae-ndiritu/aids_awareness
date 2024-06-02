@@ -10,7 +10,7 @@ if (!isset($_SESSION['is_admin']) || !$_SESSION['is_admin']) {
 require '../config/db.php';
 
 // Fetch posts from the database
-$query = "SELECT posts.id, users.username, posts.title, posts.content, posts.created_at 
+$query = "SELECT posts.id, users.username, posts.title, posts.content, posts.created_at, posts.flagged
           FROM posts 
           JOIN users ON posts.user_id = users.id 
           ORDER BY posts.created_at DESC";
@@ -63,6 +63,7 @@ $result = $conn->query($query);
                         <th class="py-2 px-4 border-b text-left">Username</th>
                         <th class="py-2 px-4 border-b text-left">Title</th>
                         <th class="py-2 px-4 border-b text-left">Created At</th>
+                        <th class="py-2 px-4 border-b text-left">Status</th>
                         <th class="py-2 px-4 border-b text-left">Actions</th>
                     </tr>
                 </thead>
@@ -74,6 +75,11 @@ $result = $conn->query($query);
                                 <td class="py-2 px-4 border-b"><?php echo htmlspecialchars($row['username']); ?></td>
                                 <td class="py-2 px-4 border-b"><?php echo htmlspecialchars($row['title']); ?></td>
                                 <td class="py-2 px-4 border-b"><?php echo htmlspecialchars($row['created_at']); ?></td>
+                                <td class="py-2 px-4 border-b">
+                                    <span class="px-4 py-1 rounded <?php echo $row['flagged'] ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'; ?>">
+                                        <?php echo $row['flagged'] ? 'Flagged' : 'Not Flagged'; ?>
+                                    </span>
+                                </td>
                                 <td class="py-2 px-4 border-b">
                                     <a href="view_post.php?id=<?php echo $row['id']; ?>" class="text-blue-500">View</a>
                                     <a href="flag_post.php?id=<?php echo $row['id']; ?>" class="text-red-500 ml-2">Flag</a>

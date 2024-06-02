@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 $username = $_SESSION['username'];
 
-$stmt = $conn->prepare("SELECT id, title, content, image_url, created_at FROM posts ORDER BY created_at DESC");
+$stmt = $conn->prepare("SELECT id, title, content, image_url, created_at FROM posts WHERE flagged=0 ORDER BY created_at DESC");
 // $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $stmt->store_result();

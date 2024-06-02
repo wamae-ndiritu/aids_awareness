@@ -11,14 +11,14 @@ require '../config/db.php';
 
 // Check if post ID is provided
 if (!isset($_GET['id'])) {
-    header("Location: admin_dashboard.php");
+    header("Location: dashboard.php");
     exit();
 }
 
 $post_id = intval($_GET['id']);
 
 // Fetch the post details from the database
-$query = "SELECT posts.id, users.username, posts.title, posts.content, posts.image_url, posts.created_at 
+$query = "SELECT posts.id, users.username, posts.title, posts.content, posts.image_url, posts.created_at, posts.flagged
           FROM posts 
           JOIN users ON posts.user_id = users.id 
           WHERE posts.id = ?";
@@ -29,7 +29,7 @@ $result = $stmt->get_result();
 $post = $result->fetch_assoc();
 
 if (!$post) {
-    header("Location: admin_dashboard.php");
+    header("Location: dashboard.php");
     exit();
 }
 
@@ -73,13 +73,19 @@ if (!$post) {
     <main class="main-content p-4">
         <div class="bg-white md:w-1/2 p-4 mb-5">
             <h2 class="text-3xl font-semibold text-gray-800"><?php echo htmlspecialchars($post['title']); ?></h2>
-        <p class="mt-2 text-gray-600">By <?php echo htmlspecialchars($post['username']); ?> on <?php echo htmlspecialchars($post['created_at']); ?></p>
-        <div class="mt-4">
-            <?php if ($post['image_url']): ?>
+            <p class="mt-2 text-gray-600">By <?php echo htmlspecialchars($post['username']); ?> on <?php echo htmlspecialchars($post['created_at']); ?></p>
+            <div class="mt-4">
+                <?php if ($post['image_url']): ?>
                     <img src="../<?php echo htmlspecialchars($post['image_url']); ?>" alt="<?php echo htmlspecialchars($post['title']); ?>" class="w-full h-96 object-contain border border-gray-300">
-            <?php endif; ?>
-            <p class="mt-4 text-gray-800"><?php echo nl2br(htmlspecialchars($post['content'])); ?></p>
-        </div>
+                <?php endif; ?>
+                <p class="mt-4 text-gray-800"><?php echo nl2br(htmlspecialchars($post['content'])); ?></p>
+            </div>
+            <div class="mt-4">
+                <form action="flag_post.php" method="post">
+                    <input type="hidden" name="post_id" value="<?php echo htmlspecialchars($post['id']); ?>">
+                    <button type="submit" class="bg-red-800 text-white px-4 py-2 rounded"><?php echo $post['flagged'] ? 'Unflag Post' : 'Flag Post'; ?></button>
+                </form>
+            </div>
         </div>
         <a href="dashboard.php" class="bg-red-600 text-white px-4 py-2 rounded mt-5">View All Posts</a>
     </main>
